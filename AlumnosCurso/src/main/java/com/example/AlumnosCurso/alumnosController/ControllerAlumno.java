@@ -18,7 +18,7 @@ import com.example.AlumnosCurso.alumnosDominio.Alumno;
 public class ControllerAlumno {
 
     private List<Alumno> alumnos = new ArrayList<>(Arrays.asList(
-        new Alumno(1, "Juan", "juan@example", "20", "Ingeniería"),
+        new Alumno(1, "Kevin", "kevin@example", "20", "Ingeniería"),
         new Alumno(2, "María", "maria@example", "22", "Medicina"),
         new Alumno(3, "Pedro", "pedro@example", "25", "Derecho"),
         new Alumno(4, "Ana", "ana@example", "21", "Arquitectura")
