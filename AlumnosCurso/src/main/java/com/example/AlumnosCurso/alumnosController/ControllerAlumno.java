@@ -45,6 +45,23 @@ public class ControllerAlumno {
         return alumno;
     }
 
+    @RequestMapping(method = RequestMethod.PUT)
+     public Alumno putAlumno(@RequestBody Alumno alumno){
+        for (Alumno a : alumnos){ 
+            if (a.getID() == alumno.getID()){
+                a.setNombre(alumno.getNombre());
+                a.setEmail(alumno.getEmail());
+                a.setEdad(alumno.getEdad());
+                a.setCurso(alumno.getCurso());
+                
+                return a;
+            
+            }   
+        }
+        return null;
+    }
+
+
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public Alumno deleteAlumno(@PathVariable int id){
         for (Alumno alumno : alumnos) {
