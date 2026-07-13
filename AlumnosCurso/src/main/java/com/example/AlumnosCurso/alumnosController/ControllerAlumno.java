@@ -49,13 +49,13 @@ public class ControllerAlumno {
      public Alumno putAlumno(@RequestBody Alumno alumno){
         for (Alumno a : alumnos){ 
             if (a.getID() == alumno.getID()){
+                
                 a.setNombre(alumno.getNombre());
                 a.setEmail(alumno.getEmail());
                 a.setEdad(alumno.getEdad());
                 a.setCurso(alumno.getCurso());
-                
-                return a;
             
+                return a;
             }   
         }
         return null;
