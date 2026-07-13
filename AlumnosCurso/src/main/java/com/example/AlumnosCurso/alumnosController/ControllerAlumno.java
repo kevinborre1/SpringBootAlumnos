@@ -40,7 +40,7 @@ public class ControllerAlumno {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public Alumno postAlumno(Alumno alumno) {
+    public Alumno postAlumno(@RequestBody Alumno alumno) {
         alumnos.add(alumno);
         return alumno;
     }
